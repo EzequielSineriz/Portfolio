@@ -1,25 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Server, 
   Database, 
   Cloud, 
   Code, 
   Shield,
-  PersonStandingIcon,
   ChevronLeft,
   ChevronRight,
-  Coffee,
-  Terminal,
   Layers,
-  Lock,
   Globe,
-  HardDrive,
-  Leaf,
   Network,
-  Box,
-  Workflow,
-  Hexagon
+  Workflow
 } from 'lucide-react';
+
+import PostgresIcon from '../svg/postgresql.svg';
+import JavaIcon from '../svg/java.svg';
+import PythonIcon from '../svg/python.svg';
+import CppIcon from '../svg/c-plusplus.svg';
+import JavascriptIcon from '../svg/javascript.svg';
+import SpringIcon from '../svg/spring.svg';
+import ExpressIcon from '../svg/expressjs.svg';
+import PostmanIcon from '../svg/postman.svg';
+import MySQLIcon from '../svg/mysql.svg';
+import MongoDBIcon from '../svg/mongodb.svg';
+import AWSIcon from '../svg/aws_light.svg';
+import DockerIcon from '../svg/docker.svg';
+import KubernetesIcon from '../svg/kubernetes.svg';
+import OAuthIcon from '../svg/auth0.svg';
+import JWTIcon from '../svg/jwt.svg';
+
+
 
 interface Skill {
   name: string;
@@ -35,35 +44,37 @@ interface SkillCategory {
   color: string;
 }
 
+
+
 const skillCategories: SkillCategory[] = [
   {
-    name: "Backend Languages",
+    name: "Languages",
     icon: <Code size={24} />,
     color: "from-blue-500 to-blue-600",
     skills: [
       { 
         name: "Java", 
-        icon: <Coffee className="text-orange-500\" size={32} />, 
+        icon: <img src={JavaIcon} alt="Java" width={32} height={32} />, 
         category: "language",
         description: "Lenguaje de programación orientado a objetos, ampliamente usado para aplicaciones empresariales, móviles y backend por su portabilidad, rendimiento y robustez."
       },
       { 
         name: "Python", 
-        icon: <Terminal className="text-green-500" size={32} />, 
+        icon: <img src={PythonIcon} alt="Python" width={32} height={32} />, 
         category: "language",
         description: "Lenguaje ideal para desarrollo web, ciencia de datos, automatización, inteligencia artificial y scripting."
       },
       { 
         name: "C++", 
-        icon: <Server className="text-green-600\" size={32} />, 
+        icon: <img src={CppIcon} alt="C++" width={32} height={32} />, 
         category: "language",
         description: "Lenguaje de programación de alto rendimiento, usado en sistemas embebidos, videojuegos y software que requiere control de memoria."
       },
       { 
-        name: "C#", 
-        icon: <Code className="text-purple-500" size={32} />, 
+        name: "Javascript", 
+        icon: <img src={JavascriptIcon} alt="Javascript" width={32} height={32} />, 
         category: "language",
-        description: ".NET applications and enterprise solutions"
+        description: ".Lenguaje de programación esencial para desarrollo web, tanto en frontend como en backend con Node.js, conocido por su versatilidad y amplia comunidad."
       }
     ]
   },
@@ -74,19 +85,19 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { 
         name: "Spring Boot", 
-        icon: <Leaf className="text-green-500\" size={32} />, 
+        icon: <img src={SpringIcon} alt="Spring" width={32} height={32} />, 
         category: "framework",
         description: "Framework Java que simplifica la creación de aplicaciones backend robustas y escalables mediante configuración automática y arquitectura modular."
       },
       { 
         name: "Express.js", 
-        icon: <Hexagon className="text-gray-400" size={32} />, 
+        icon: <img src={ExpressIcon} alt="Express" width={32} height={32} />, 
         category: "framework",
         description: "Framework minimalista para Node.js que permite crear APIs REST de manera rápida y flexible con middleware y enrutamiento sencillo."
       },
       { 
         name: "Postman", 
-        icon: <PersonStandingIcon className="text-blue-500\" size={32} />, 
+        icon: <img src={PostmanIcon} alt="Postman" width={32} height={32} />, 
         category: "framework",
         description: "Es una plataforma API que sirve como herramienta fundamental para desarrolladores en el proceso de creación, prueba, documentación y colaboración en APIs "
       }
@@ -100,19 +111,19 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { 
         name: "PostgreSQL", 
-        icon: <Database className="text-blue-600\" size={32} />, 
+        icon: <img src={PostgresIcon} alt="PostgreSQL" width={32} height={32} />, 
         category: "database",
         description: "Sistema de base de datos relacional y de código abierto, conocido por su estabilidad, extensibilidad y soporte avanzado de consultas."
       },
       { 
         name: "MySQL", 
-        icon: <HardDrive className="text-orange-500" size={32} />, 
+        icon: <img src={MySQLIcon} alt="MySQL" width={32} height={32} />, 
         category: "database",
         description: "Base de datos relacional popular y eficiente, ideal para aplicaciones web y empresariales gracias a su velocidad y facilidad de uso."
       },
       { 
         name: "MongoDB", 
-        icon: <Database className="text-green-500\" size={32} />, 
+        icon: <img src={MongoDBIcon} alt="MongoDB" width={32} height={32} />, 
         category: "database",
         description: "Base de datos NoSQL orientada a documentos, ideal para manejar datos no estructurados y escalar aplicaciones modernas con flexibilidad."
       }
@@ -126,19 +137,19 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { 
         name: "AWS", 
-        icon: <Cloud className="text-orange-500\" size={32} />, 
+        icon: <img src={AWSIcon} alt="AWS" width={32} height={32} />, 
         category: "cloud",
         description: "Plataforma de servicios en la nube que ofrece infraestructura escalable, almacenamiento, bases de datos, cómputo y herramientas de desarrollo."
       },
       { 
         name: "Docker", 
-        icon: <Box className="text-blue-500" size={32} />, 
+        icon: <img src={DockerIcon} alt="Docker" width={32} height={32} />, 
         category: "devops",
         description: "Herramienta de contenedores que permite empaquetar aplicaciones con sus dependencias para ejecutarlas de forma consistente en cualquier entorno."
       },
       { 
         name: "Kubernetes", 
-        icon: <Network className="text-blue-600\" size={32} />, 
+        icon: <img src={KubernetesIcon} alt="Kubernetes" width={32} height={32} />, 
         category: "devops",
         description: "Sistema de orquestación de contenedores que automatiza el despliegue, escalado y gestión de aplicaciones en contenedores."
       }
@@ -152,13 +163,13 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { 
         name: "OAuth 2.0", 
-        icon: <Lock className="text-green-500\" size={32} />, 
+        icon: <img src={OAuthIcon} alt="Auth" width={32} height={32} />, 
         category: "security",
         description: "Protocolo de autorización estándar que permite a aplicaciones acceder a recursos de usuario sin compartir credenciales directamente."
       },
       { 
         name: "JWT", 
-        icon: <Shield className="text-blue-500" size={32} />, 
+        icon: <img src={JWTIcon} alt="JWT" width={32} height={32} />, 
         category: "security",
         description: "JSON Web Tokens permiten la transmisión segura de información entre partes como tokens firmados digitalmente para autenticación y autorización."
       }
