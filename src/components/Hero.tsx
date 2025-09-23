@@ -4,7 +4,7 @@ import { Download, ChevronDown } from 'lucide-react';
 
 const handleDownload = () => {
   const link = document.createElement('a');
-  link.href = '/cv_ezequielsineriz.pdf'; // Asegúrate de que el archivo esté en la carpeta 'public'
+  link.href = '/cv_ezequielsineriz.pdf'; // El archivo debe estar en la carpeta 'public'
   link.download = 'cv_ezequielsineriz.pdf';
   document.body.appendChild(link);
   link.click();
