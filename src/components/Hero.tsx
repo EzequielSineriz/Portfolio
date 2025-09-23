@@ -4,8 +4,8 @@ import { Download, ChevronDown } from 'lucide-react';
 
 const handleDownload = () => {
   const link = document.createElement('a');
-  link.href = '/cv_ezequiel_sineriz.pdf';
-  link.download = 'cv_Ezequiel_Sineriz.pdf';
+  link.href = '/EzequielSinerizCv.pdf';
+  link.download = 'EzequielSinerizCv.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
