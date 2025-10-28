@@ -3,8 +3,8 @@ import { ExternalLink, Github } from 'lucide-react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css/navigation"; // Importa el CSS de navegación
+import "swiper/css/pagination"; // Importa el CSS de paginación
 
 import agregarClienteImg from '../img/ProyectoEstetica/AgregarCliente.png';
 import agregarTurnoImg from '../img/ProyectoEstetica/AgregarTurno.png';
@@ -155,17 +155,7 @@ export default function Projects() {
                   <Github size={18} />
                   Code
                 </a>
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-white rounded-lg transition-all duration-300 hover:scale-105"
-                  >
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </a>
-                )}
+
               </div>
             </div>
           ))}
