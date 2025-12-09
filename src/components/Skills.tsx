@@ -14,8 +14,6 @@ import {
 
 import PostgresIcon from '../svg/postgresql.svg';
 import JavaIcon from '../svg/java.svg';
-import PythonIcon from '../svg/python.svg';
-import CppIcon from '../svg/c-plusplus.svg';
 import JavascriptIcon from '../svg/javascript.svg';
 import SpringIcon from '../svg/spring.svg';
 import ExpressIcon from '../svg/expressjs.svg';
@@ -27,7 +25,7 @@ import DockerIcon from '../svg/docker.svg';
 import KubernetesIcon from '../svg/kubernetes.svg';
 import OAuthIcon from '../svg/auth0.svg';
 import JWTIcon from '../svg/jwt.svg';
-
+import TypeScript from '../svg/typescript-svgrepo-com.svg';
 
 
 interface Skill {
@@ -58,23 +56,18 @@ const skillCategories: SkillCategory[] = [
         category: "language",
         description: "Lenguaje de programación orientado a objetos, ampliamente usado para aplicaciones empresariales, móviles y backend por su portabilidad, rendimiento y robustez."
       },
+
       { 
-        name: "Python", 
-        icon: <img src={PythonIcon} alt="Python" width={32} height={32} />, 
+        name: "Javascript", 
+        icon: <img src={JavascriptIcon} alt="JavaScript" width={32} height={32} />, 
         category: "language",
-        description: "Lenguaje ideal para desarrollo web, ciencia de datos, automatización, inteligencia artificial y scripting."
-      },
-      { 
-        name: "C++", 
-        icon: <img src={CppIcon} alt="C++" width={32} height={32} />, 
-        category: "language",
-        description: "Lenguaje de programación de alto rendimiento, usado en sistemas embebidos, videojuegos y software que requiere control de memoria."
+        description: "Lenguaje de programación esencial para desarrollo web, tanto en frontend como en backend con Node.js, conocido por su versatilidad y amplia comunidad."
       },
       { 
         name: "Javascript", 
-        icon: <img src={JavascriptIcon} alt="Javascript" width={32} height={32} />, 
+        icon: <img src={TypeScript} alt="TypeScript" width={32} height={32} />, 
         category: "language",
-        description: ".Lenguaje de programación esencial para desarrollo web, tanto en frontend como en backend con Node.js, conocido por su versatilidad y amplia comunidad."
+        description: " TypeScript es un superconjunto de JavaScript que añade tipado estático opcional y funciones avanzadas a JavaScript."
       }
     ]
   },
@@ -184,19 +177,19 @@ const skillCategories: SkillCategory[] = [
         name: "Microservices", 
         icon: <Network className="text-cyan-500\" size={32} />, 
         category: "architecture",
-        description: "Distributed system architecture patterns"
+        description: "Estilo de arquitectura de software en el que una aplicación se construye como un conjunto de servicios pequeños, independientes y autónomos, cada uno con su propia lógica de negocio y base de datos, y que se comunican entre sí generalmente a través de APIs REST, mensajería o eventos."
       },
       { 
         name: "REST APIs", 
         icon: <Globe className="text-blue-500" size={32} />, 
         category: "architecture",
-        description: "RESTful web service design and development"
+        description: "Estilo de arquitectura para crear interfaces de comunicación entre sistemas. Permiten que diferentes aplicaciones se comuniquen usando HTTP de manera estandarizada y sencilla."
       },
       { 
         name: "System Design", 
         icon: <Workflow className="text-indigo-500" size={32} />, 
         category: "architecture",
-        description: "Scalable system architecture planning"
+        description: "System Design es el proceso de planificar y estructurar un sistema software grande y complejo para que sea escalable, eficiente y mantenible. No se trata de programar directamente, sino de definir arquitectura, componentes y flujos."
       }
     ]
   }
