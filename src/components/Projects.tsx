@@ -6,13 +6,14 @@ import "swiper/css";
 import "swiper/css/navigation"; // Importa el CSS de navegación
 import "swiper/css/pagination"; // Importa el CSS de paginación
 
-import agregarClienteImg from '../img/ProyectoEstetica/AgregarCliente.png';
-import agregarTurnoImg from '../img/ProyectoEstetica/AgregarTurno.png';
-import calendarioImg from '../img/ProyectoEstetica/Calendario.png';
-import clientesImg from '../img/ProyectoEstetica/Clientes.png';
-import dashboardImg from '../img/ProyectoEstetica/DashBoard.png';
-import editarTurnosImg from '../img/ProyectoEstetica/EditarTurnos.png';
-import loginImg from '../img/ProyectoEstetica/log-in.png';
+import agregarClienteImg from '/assets/images/0.jpeg';
+import agregarTurnoImg from '/assets/images/2.jpeg';
+import calendarioImg from '/assets/images/3.jpeg';
+import clientesImg from '/assets/images/4.jpeg';
+import dashboardImg from '/assets/images/5.jpeg';
+import editarTurnosImg from '/assets/images/6.jpeg';
+import loginImg from '/assets/images/7.jpeg';
+
 
 
 
@@ -36,10 +37,10 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    name: "Estetica Integral de Belleza",
-    description: "AppEstetica es una aplicación web moderna para la gestión integral de una estética corporal, optimizando la organización de clientes, empleados, turnos y servicios.Su interfaz responsiva y estilo SPA permite un control eficiente y visualmente agradable de todas las operaciones.",
+    name: "Agenda Virtual Estetica",
+    description: "Agenda Virtual desarrollado con FullCalendar, aplicacion para integrar los clientes y los turnos que va registrando la estetica, una interfaz clara con un flujo de trabajo orientado a facilitar la recolecion de datos y no perder ningun cliente por no tener una agenda fisica a mano.",
     technologies: ["Java", "Spring Boot", "Spring Security","JWT" ,"Docker", "MySQL", "Postman"],
-    githubUrl: "https://github.com/EzequielSineriz/EsteticaFrontBack",
+    githubUrl: "https://github.com/EzequielSineriz/BackHealthEstetica",
     liveUrl: "https://demo.ecommerce-platform.com",
     featured: true,
     images: [
